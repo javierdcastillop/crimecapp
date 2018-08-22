@@ -1,0 +1,7 @@
+{
+  "name": "crimecapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
