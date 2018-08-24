@@ -43,6 +43,7 @@ export class MyApp {
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
+    { title: 'Mapa principal', component: 'MapaPage' },
     { title: 'Search', component: 'SearchPage' }
   ]
 

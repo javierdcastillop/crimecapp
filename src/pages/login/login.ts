@@ -20,7 +20,7 @@ export class LoginPage {
   };
 
   // Our translated text strings
-  private loginErrorString: string;
+  public LoginErrorstring: string;
 
   constructor(
     public navCtrl: NavController,
@@ -31,17 +31,17 @@ export class LoginPage {
     public events: Events){
   events.subscribe('user:created',(User,time)=>{
     this.navCtrl.push(MainPage);
-  });
-}
+  })
+
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
       this.loginErrorString = value;
     })
-  
+  }
 
   // Attempt to login in through our User service
-  doLogin() 
-    this.user.login(this.account).subscribe((resp) => {
-      this.navCtrl.push(MainPage);
+  doLogin() {
+    this.LoginServiceProvider.login(this.account);
+ /*     this.navCtrl.push(MainPage);
     }, (err) => {
       this.navCtrl.push(MainPage);
       // Unable to log in
@@ -51,6 +51,7 @@ export class LoginPage {
         position: 'top'
       });
       toast.present();
-    });
-  
+    });*/
+  }
+}
 
