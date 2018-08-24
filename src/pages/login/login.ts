@@ -36,10 +36,10 @@ export class LoginPage {
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
       this.loginErrorString = value;
     })
-  }
+  
 
   // Attempt to login in through our User service
-  doLogin() {
+  doLogin() 
     this.user.login(this.account).subscribe((resp) => {
       this.navCtrl.push(MainPage);
     }, (err) => {
@@ -52,5 +52,5 @@ export class LoginPage {
       });
       toast.present();
     });
-  }
-}
+  
+
