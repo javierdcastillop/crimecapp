@@ -27,14 +27,15 @@ export class LoginPage {
     public user: User,
     public toastCtrl: ToastController,
     public translateService: TranslateService,
-    public LoginService: LoginServiceProvider, 
-    public events: Events){
+    public LoginServiceProvider: LoginServiceProvider, 
+    public events: Events
+  ){
   events.subscribe('user:created',(User,time)=>{
     this.navCtrl.push(MainPage);
   })
 
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
-      this.loginErrorString = value;
+      this.LoginErrorstring = value;
     })
   }
 
